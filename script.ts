@@ -3,7 +3,7 @@ const plus = (number1: number, number2: number) => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  const button = document.querySelector("#myButton");
+  const button = document.querySelector("#myButton")!;
   const num1 = document.querySelector("#num1")! as HTMLInputElement;
   const num2 = document.querySelector("#num2")! as HTMLInputElement;
   const result = document.querySelector("#result")!;
