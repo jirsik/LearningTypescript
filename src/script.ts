@@ -2,7 +2,8 @@ const plus = (number1: number, number2: number) => {
   return number1 + number2;
 };
 
-const publish = (data: string, target: HTMLParagraphElement) => {
+const publish = (number1: HTMLInputElement, number2: HTMLInputElement, target: HTMLParagraphElement) => {
+  const data: string = plus(+number1.value, +number2.value).toString();
   target.innerHTML = data;
   console.log(data);
 };
@@ -16,12 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (button) {
     button.addEventListener(
       "click",
-      publish.bind(null, plus(+num1.value, +num2.value).toString(), result)
+      publish.bind(null, num1, num2, result)
     );
-
-    // () => {
-    //   result.innerHTML = plus(+num1.value, +num2.value).toString();
-    //   console.log("yes");
-    // });
   }
 });
